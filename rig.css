@@ -1,0 +1,31 @@
+/*======= VARIABLES =======*/
+/*======= MIXINS =======*/
+body {
+  margin: 0px; }
+
+.rig {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden; }
+  .rig .rig-sidebar {
+    height: 100%;
+    float: left;
+    overflow: scroll;
+    width: 275px; }
+  .rig .rig-body {
+    height: 100%;
+    float: left;
+    overflow: scroll; }
+  .rig .rig-mobile-wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%; }
+
+.rig:not(.resizing) .rig-mobile-wrapper {
+  -webkit-transition: left .23s ease-out;
+  -moz-transition: left .23s ease-out;
+  -ms-transition: left .23s ease-out;
+  -o-transition: left .23s ease-out;
+  transition: left .23s ease-out; }

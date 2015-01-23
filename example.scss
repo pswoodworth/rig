@@ -1,0 +1,23 @@
+.example-sidebar{
+	background-color: #f17872;
+	p{
+		font-family: 'avenir';
+		color: white;
+		margin: 1em;
+		font-size: 2em;
+	}
+}
+
+.example-body{
+	background-color: #f7f7f7;
+	p{
+		font-family: 'avenir';
+		color: #0a0a0a;
+		margin: 1em;
+		font-size: 1.4em;
+	}
+
+	p#back{
+		color: #f17872;
+	}
+}
