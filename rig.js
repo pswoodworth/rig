@@ -3,7 +3,7 @@ var breakpoint = 600,
 
 
 function initRig(){
-	$('.rig').wrapInner('<div class="rig-mobile-wrapper"></div>');
+	$('.rig').wrapInner('<div class="rig-wrapper"></div>');
 
 	$('.rig-forward').click(function(){
 		if(isMobile()){
@@ -25,7 +25,7 @@ function rig(){
 	if($(window).width() > breakpoint){
 		// desktop/tablet
 
-		$('.rig, .rig-sidebar, .rig-body, .rig-mobile-wrapper').removeAttr('style');
+		$('.rig, .rig-sidebar, .rig-body, .rig-wrapper').removeAttr('style');
 
 		var totalSidebarWidth = 0;
 
@@ -38,13 +38,13 @@ function rig(){
 	}else{
 		// mobile
 
-		$('.rig', '.rig-sidebar, .rig-body, .rig-mobile-wrapper').removeAttr('style');
+		$('.rig', '.rig-sidebar, .rig-body, .rig-wrapper').removeAttr('style');
 
-		$('.rig-mobile-wrapper').width($('.rig-sidebar, .rig-body').length * $(window).width());
+		$('.rig-wrapper').width($('.rig-sidebar, .rig-body').length * $(window).width());
 
 		$('.rig, .rig-sidebar, .rig-body').width($(window).width());
 
-		$('.rig-mobile-wrapper').css('left', $(window).width() * -1)
+		$('.rig-wrapper').css('left', $(window).width() * -1)
 
 	};
 };
@@ -57,7 +57,7 @@ function isMobile(){
 
 function updateMobilePosition(){
 	if (isMobile()){
-		$('.rig-mobile-wrapper').css('left',  $(window).width() * -1 * mobilePositionIndex);
+		$('.rig-wrapper').css('left',  $(window).width() * -1 * mobilePositionIndex);
 	};
 };
 
@@ -72,7 +72,7 @@ $(document).ready(function(){
 var resizeTimeout;
 $(window).resize(function(){
 	$('.rig').addClass('resizing');
-	
+
 	rig();
 	updateMobilePosition();
 

@@ -17,15 +17,22 @@ body {
     height: 100%;
     float: left;
     overflow: scroll; }
-  .rig .rig-mobile-wrapper {
+  .rig .rig-wrapper {
     position: absolute;
     top: 0px;
     left: 0px;
     height: 100%; }
 
-.rig:not(.resizing) .rig-mobile-wrapper {
+.rig:not(.resizing) .rig-wrapper {
   -webkit-transition: left .23s ease-out;
   -moz-transition: left .23s ease-out;
   -ms-transition: left .23s ease-out;
   -o-transition: left .23s ease-out;
   transition: left .23s ease-out; }
+
+@media only screen and (min-width: 600px) {
+  .rig .rig-hide-desktop {
+    display: none !important; } }
+@media only screen and (max-width: 600px) {
+  .rig .rig-hide-mobile {
+    display: none !important; } }
