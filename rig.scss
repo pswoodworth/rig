@@ -1,7 +1,8 @@
  
 /*======= VARIABLES =======*/
-$breakpoint: 600px;
-$sidebar-width: 275px;
+$small-breakpoint: 600px;
+$large-breakpoint: 1024px;
+$default-sidebar-width: 275px;
 
 
  /*======= MIXINS =======*/
@@ -21,11 +22,11 @@ body{
 	width: 100%;
 	position: relative;
 	overflow-x: hidden;
-	.rig-sidebar{
+	.rig-fixed{
 		@include rig-element;
-		width: $sidebar-width;
+		width: $default-sidebar-width;
 	}
-	.rig-body{
+	.rig-flex{
 		@include rig-element;
 
 	}
@@ -38,7 +39,8 @@ body{
 	}
 }
 
-.rig:not(.resizing){
+.rig:not(.rig-resizing):not(.rig-init){
+	/*transitions go in here*/
 	.rig-wrapper{
 		-webkit-transition: left .23s ease-out;
 		-moz-transition: left .23s ease-out;
@@ -46,10 +48,17 @@ body{
 		-o-transition: left .23s ease-out;
 		transition: left .23s ease-out;
 	}
+	.rig-flex{
+		-webkit-transition: width .23s ease-out;
+		-moz-transition: width .23s ease-out;
+		-ms-transition: width .23s ease-out;
+		-o-transition: width .23s ease-out;
+		transition: width .23s ease-out;
+	}
 }
 
 
-@media only screen and (min-width: $breakpoint){
+@media only screen and (min-width: $small-breakpoint){
 .rig{
 	.rig-hide-desktop{
 		display: none !important;
@@ -57,7 +66,7 @@ body{
 }
 }
 
-@media only screen and (max-width: $breakpoint){
+@media only screen and (max-width: $small-breakpoint){
 .rig{
 	.rig-hide-mobile{
 		display: none !important;

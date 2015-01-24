@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<div class="rig">
-			<div class="rig-sidebar example-sidebar">
+			<div class="rig-fixed example-sidebar">
 				<p class="rig-forward">here's this</p>
 				<p class="rig-forward">and this</p>
 				<p class="rig-forward">and this</p>
@@ -21,8 +21,11 @@
 				<p class="rig-forward">and this</p>
 				<p class="rig-forward">and this</p>
 			</div>
-			<div class="rig-body example-body">
-				<p class="rig-back rig-hide-desktop" id="back">back</p>
+			<div class="rig-flex example-body">
+				<div class="controls rig-hide-desktop">
+					<p class="rig-back example-back">back</p>
+					<p class="rig-forward example-forward">forward</p>
+				</div>
 				<p>
 				Bacon ipsum dolor amet short ribs pork chop ball tip fatback pork belly bresaola ground round cow beef ribs ribeye meatloaf. Salami doner ball tip tail venison t-bone, tri-tip pastrami pork frankfurter sirloin short ribs prosciutto cow boudin. Ham hock meatloaf pork beef biltong spare ribs frankfurter tongue. Chuck tri-tip alcatra short ribs pork pancetta tail cupim meatloaf ground round tongue pork chop. Rump sirloin pancetta, shoulder alcatra pastrami bacon turducken. Tongue pancetta prosciutto pork chop short loin spare ribs kevin pastrami.<br><br>
 
@@ -30,6 +33,13 @@
 
 				Ball tip sirloin boudin picanha short ribs corned beef jerky. Biltong strip steak short loin landjaeger shank bacon. Beef ribs spare ribs swine kevin pig, shank bacon turducken tri-tip. Ground round pork belly swine pancetta.
 				</p>
+			</div>
+			<div class="rig-flex example-right-sidebar">
+				<div class="controls">
+					<p class="rig-back example-back rig-hide-desktop">back</p>
+					<p class="rig-hide-right-panel example-forward">hide</p>
+				</div>
+				<p>I'm a right-hand sidebar, I contain all kinds of cool information</p>
 			</div>
 		</div>
 

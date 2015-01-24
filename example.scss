@@ -1,7 +1,26 @@
-.example-sidebar{
-	background-color: #f17872;
+p{
+	font-family: 'avenir';
+}
+
+.controls{
+		height: 3.5em;
+
 	p{
-		font-family: 'avenir';
+		font-size: 16pt;
+		color: #f17872;
+	}
+
+	p.example-back{
+		float: left;
+	}
+	p.example-forward{
+		float: right;
+	}
+}
+
+.example-sidebar{
+	background-color: #1e252b;
+	p{
 		color: white;
 		margin: 1em;
 		font-size: 2em;
@@ -11,13 +30,17 @@
 .example-body{
 	background-color: #f7f7f7;
 	p{
-		font-family: 'avenir';
 		color: #0a0a0a;
 		margin: 1em;
 		font-size: 1.4em;
 	}
 
-	p#back{
-		color: #f17872;
+}
+
+.example-right-sidebar{
+	background-color: #cac8c8;
+	p{
+		margin: 1em;
+		color: #1e252b;
 	}
 }

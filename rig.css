@@ -8,12 +8,12 @@ body {
   width: 100%;
   position: relative;
   overflow-x: hidden; }
-  .rig .rig-sidebar {
+  .rig .rig-fixed {
     height: 100%;
     float: left;
     overflow: scroll;
     width: 275px; }
-  .rig .rig-body {
+  .rig .rig-flex {
     height: 100%;
     float: left;
     overflow: scroll; }
@@ -23,12 +23,20 @@ body {
     left: 0px;
     height: 100%; }
 
-.rig:not(.resizing) .rig-wrapper {
-  -webkit-transition: left .23s ease-out;
-  -moz-transition: left .23s ease-out;
-  -ms-transition: left .23s ease-out;
-  -o-transition: left .23s ease-out;
-  transition: left .23s ease-out; }
+.rig:not(.rig-resizing):not(.rig-init) {
+  /*transitions go in here*/ }
+  .rig:not(.rig-resizing):not(.rig-init) .rig-wrapper {
+    -webkit-transition: left .23s ease-out;
+    -moz-transition: left .23s ease-out;
+    -ms-transition: left .23s ease-out;
+    -o-transition: left .23s ease-out;
+    transition: left .23s ease-out; }
+  .rig:not(.rig-resizing):not(.rig-init) .rig-flex {
+    -webkit-transition: width .23s ease-out;
+    -moz-transition: width .23s ease-out;
+    -ms-transition: width .23s ease-out;
+    -o-transition: width .23s ease-out;
+    transition: width .23s ease-out; }
 
 @media only screen and (min-width: 600px) {
   .rig .rig-hide-desktop {
