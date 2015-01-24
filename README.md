@@ -14,18 +14,16 @@ Setting up rig in your markup requires the use of a parent `.rig` div and `.rig-
 A basic setup might look like this:
 
 ```html
-	<body>
-		<div class="rig">
-			<div class="rig-sidebar">
-				<a class="rig-forward"> a sidebar option </a>
-				<a class="rig-forward"> another sidebar option </a>
-			</div>
-			<div class="rig-body">
-				<a class="rig-back"> a back button </a>
-				...body content...
-			</div>
-		</div>
-	<body>
+<div class="rig">
+	<div class="rig-sidebar">
+		<a class="rig-forward"> a sidebar option </a>
+		<a class="rig-forward"> another sidebar option </a>
+	</div>
+	<div class="rig-body">
+		<a class="rig-back"> a back button </a>
+		...body content...
+	</div>
+</div>
 ```
 
 you can see a sample implemenation along these lines in `example.html` included in this repo. Feel free to use that as a base for a new project.
