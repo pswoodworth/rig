@@ -1,7 +1,7 @@
 RIG.js 
 ======
 
-A simple library for responsive columned mobile layouts.
+A simple library for responsive columned layouts.
 
 setup
 -----
