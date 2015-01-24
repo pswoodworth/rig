@@ -1,4 +1,4 @@
-RIG.js 
+rig.js 
 ======
 
 A simple library for responsive columned layouts.
