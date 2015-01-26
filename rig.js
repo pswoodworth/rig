@@ -1,18 +1,20 @@
 // Breakpoints
 var smallBreakpoint = 600,
-	largeBreakpoint = 1024,
-// initial position on mobile screens, zero-indexed from left to right
-	initMobilePositionIndex = 0;
+	largeBreakpoint = 1024;
 
 
-var mobilePositionIndex = initMobilePositionIndex;
+var mobilePositionIndex = 0,
+	defaultMobileIndex = false;
 
 // bindings and init setup – runs only once on ready
 function initRig(){
 	$('.rig').addClass('rig-init');
-	setTimeout(function(){$('.rig').removeClass('rig-init')}, 50);
 
 	$('.rig').wrapInner('<div class="rig-wrapper"></div>');
+
+	if($('.rig-mobile-default').length > 0){
+		mobilePositionIndex = $('.rig-flex, .rig-fixed').index($('.rig-mobile-default')[0]);
+	};
 
 	$('.rig-forward').click(function(){
 		if(isMobile()){
@@ -32,6 +34,8 @@ function initRig(){
 		$('.rig-fixed:not(.rig-collapsed), .rig-flex:not(.rig-collapsed)').eq(-1).addClass('rig-collapsed');
 		rig();
 	});
+
+	setTimeout(function(){$('.rig').removeClass('rig-init')}, 50);
 };
 
 
@@ -62,6 +66,9 @@ function rig(){
 
 		$('.rig-flex.rig-collapsed').width(($(window).width() - visibleFixedWidth) / $('.rig-flex').length);
 
+		$('.rig-flex, .rig-fixed').removeClass('rig-right-panel');
+		$('.rig-flex:not(.rig-collapsed), .rig-fixed:not(rig-collapsed)').eq(-1).addClass('rig-right-panel');
+
 
 	}else{
 		// mobile
@@ -79,7 +86,6 @@ function rig(){
 
 
 function isMobile(){
-	console.log($(window).width() < smallBreakpoint);
 	return $(window).width() < smallBreakpoint;
 };
 
@@ -108,7 +114,6 @@ $(window).resize(function(){
 	clearTimeout(resizeTimeout);
 	resizeTimeout = setTimeout(function(){
 		$('.rig').removeClass('rig-resizing');
-		console.log('resize done');
 	}, 50);
 
 });
