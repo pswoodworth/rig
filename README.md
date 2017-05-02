@@ -1,4 +1,4 @@
-Warning: I wrote this a long time ago – if you're here you should probably use flex-box instead of this mess!
+Warning: I wrote this a long time ago – if you're here you should probably use flex-box instead!
 
 rig.js 
 ======
