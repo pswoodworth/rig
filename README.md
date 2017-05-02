@@ -1,3 +1,5 @@
+Warning: I wrote this a long time ago – if you're here you should probably use flex-box instead of this mess!
+
 rig.js 
 ======
 
@@ -37,9 +39,3 @@ rig can be customized with some simple changes to the source. In particular, cha
 Current options:
 - set a custom breakpoint (this must be set in both `rig.scss` and `rig.js` to work properly)
 - set a custom sidebar width (in `rig.scss`)
-
-
-heads up
---------
-
-rig does not provide any handling for managing content - that's left for you to do yourself with whichever front-end data management library or technique you prefer.
